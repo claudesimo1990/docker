@@ -1,0 +1,89 @@
+version: '3.7'
+services:
+  redis:
+    build:
+      context: .
+      dockerfile: redis/Dockerfile
+    container_name: claude_pimcore_redis
+    networks:
+      - proxy
+
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+      args:
+        crt: ./certs/localhost.crt
+        key: ./certs/localhost.key
+        fastcgi: ./nginx/config/fastcgi.conf
+        default_conf: ./nginx/config/default.conf
+        nginx_conf: ./nginx/config/nginx_prod.conf
+    volumes:
+      - /var/pimcore/www:/var/www/html
+      - /var/pimcore/data:/var/www/data
+      - /var/pimcore/logs/nginx:/var/log/nginx
+    links:
+      - php
+    container_name: claude_pimcore_nginx
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.claude_pimcore_nginx-secure.entrypoints=websecure"
+      - "traefik.http.routers.claude_pimcore_nginx-secure.middlewares=user-auth@file"
+      - "traefik.http.routers.claude_pimcore_nginx-secure.rule=Host(`pimcore.${DOMAIN}`)"
+
+  db:
+    build:
+      context: .
+      dockerfile: mariadb/Dockerfile
+    container_name: claude_pimcore_db
+    command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci, --innodb-file-format=Barracuda, --innodb-large-prefix=1, --innodb-file-per-table=1]
+    volumes:
+      - /var/mysqlData/data:/var/lib/mysql
+      - ./mariadb/exchange:/data_exchange
+      - ./mariadb/logs/mysql:/var/logs/mysql
+      - ./mariadb/data/mariadb/conf:/etc/mysql/conf.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=ROOT
+      - MYSQL_DATABASE=pimcore
+      - MYSQL_USER=pimcore
+      - MYSQL_PASSWORD=pimcore
+    networks:
+      - proxy
+
+  php:
+    build:
+      context: .
+      dockerfile: php/Dockerfile
+    container_name: claude_pimcore_php-fpm
+    volumes:
+      - /var/pimcore/www:/var/www/html:cached
+      - /var/pimcore/data/nginx:/var/www/data
+      - /var/pimcore/logs/php-fpm:/var/log/php
+      - /var/pimcore/logs/cron:/var/log/cron
+    depends_on:
+      - db
+    networks:
+      - proxy
+
+  php-debug:
+    image: pimcore/pimcore:PHP8.0-apache-debug
+    container_name: claude_pimcore_debug
+    volumes:
+      - .:/var/www/html:cached
+    ports:
+      - 88:80
+    environment:
+      - PHP_IDE_CONFIG="serverName=localhost"
+      - APACHE_DOCUMENT_ROOT=/var/www/html/public
+    networks:
+      - proxy
+
+volumes:
+  pimcore-database:
+
+networks:
+  proxy:
+    external: true

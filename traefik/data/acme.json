@@ -1,0 +1,23 @@
+{
+  "buypass": {
+    "Account": null,
+    "Certificates": null
+  },
+  "letsencrypt": {
+    "Account": {
+      "Email": "claudesimo1990@gmail.com",
+      "Registration": {
+        "body": {
+          "status": "valid",
+          "contact": [
+            "mailto:claudesimo1990@gmail.com"
+          ]
+        },
+        "uri": "https://acme-v02.api.letsencrypt.org/acme/acct/126926105"
+      },
+      "PrivateKey": "MIIJKQIBAAKCAgEA0EH+YF7VMBUjL52AvhftpTFjsXtZ7Q6jOvdbZPYEOVgs/2dY4sZGum9oXvddbKC73mfFJanBxk0Y75yJsA/kZ+ZtQrMEPY33HqMjSsFasDFZMBNa5W9h+PuvgUGxT21ybPfEO2Dmzgc5z8QW6JuX3NSUYoGB8cLLRAUosOJ555xabK/q3P+0QTdYS1gCNwRBiu8ZBdd8nngXtnvW468MvQLpKkzrOJeLsCGwxLvxNMyJFMj/pWuYk4fYud8ZQkDzNdiVDP3ATt03L2fiGUdiN2OiPw4GCg/2PYpgWhHe1AlF9YLIrNTwLEazQqmnTY385e7HxUQX8mzd+w++0OyDEpCU7Ln3mO4QQ1IWIDyBekvrJAKbDYD2V8hO3+kpWNQcF8qsG1BhdPNEViYu6Z04xu1+3ED5F90LIz3tND3JzSgrqt0bs/XDaP+LTG7LXWClfXLq3fIPxD1g3H9eI4z/CLQUqXc5pfYTeiyACPGq83yoxgFoxYGKbxYku2JZ0KqsXLLrTqwEG13YTo860dIYCirX3n5wlKgaSEWwq579vUwYPTXkCzYwXBgmT8Itc6mTpA2tMVw/As/T4lcxuCpQc6Q6Dfu4tD98Jk8uBg0OVJBvyb5+8/1frE6lKXdFpKN5ECnFy8M+CZ1P8xIFTfJC1wI/lzOn5sAO9qHgrD26trUCAwEAAQKCAgEAnaMGcF34EwA89QLMe5dTK/J5mtNa20R0K+MmTAKoadujm+PXdThOOzqvDwtArUPxUMTNhte7NGYRVPXxhtJQupDB7XXh5NH71zX3NdOr2KhR8UEFUZwA1d11GGroUs3uiir1X1jW++aeTPUJviJgTiie9P1ApgYjpCYfidy0F6vTCmgSaBwpjh/ddpJ0gr52+jpHf5N/4dfXYyrUGt3az4tPgNReTCTx+G1YB2KXjravoIsQb19FS47Nbsw/q1XMgtqg4AeHNGrgJcMFcssEvhZtrjroOV+hrS18B1F1kJxAVzkauzAnZ+xQLkqKt/qdDlKy5k/HrJnZYPunHS+ZeeqPaHr8RaDRNuE0WJIOJrROdfKL31xSwoicQkl71LoiYs5d0N+neDciniJDxj2j6QMyx+N9O1iCk/nvQLVs5vI1dZjMqhn8kNyeX8cK7jcvhe9pGssY0v26mgcXeGHcVxiuHj1VCVVHvpsC4/TB6ZtE5lwGHAfII/u7T0M9uHpsVrQFBgKzGFFAHdpby47Xfxq1ol1FK/CLb75ed3pbXkTyA5adD8VBcQJxGGdKmQJ736oAZbxrKnOc8sJqMKf9MwuQLjLd8KuzDIp9kwUNdKADNDN8e5uTgM81DhRAKGp30TMwQi7ktPZJgbjgi7+62976M1611A6n6uRddzYzBaECggEBAPd+h83I9YChhIi9f7oiGAAxv/pN8n2a2dy5JjzlAcrSU8fLJVFFPWOBg4LOMxNCC/oace+amSekvEtXop9pmVM6xMomkULPu4sJli6gwlxbYzhstHxIymtX4bSXbmPB82TDm9g3rpclU6gEic/o0DR09SkyPdLIw3scNzfaChxhAX5YMlmKZBe/g8K2JgayAd05bJ5qiBKonf14HSMFdPUPy5inOYgl+LhVwI7QcMLhp6QT/yVP/LEkrejQXyVOJ6Xfnkg1mMycTBI4RhNupT5vnm9SH+OgSxQ4Kpsz16881GGEQ6iuaczaKmXQHv43QpG59mR7yV84ATbMGu6bYI0CggEBANdqQiDHp/0rqNYjWGizQoPDCilEjhEcExBRneEkNuLbWxKO+U1RF8OkGcBYMLqDeeAhAfGvv7ULWL+M3rVzXz3rlEXMTkGHkyvhgWDoEwEfSjDrdiu4UcTgs+XbM/WlDaVzUIkqsKTIgoloft7Y4OfsogdCahz5lMFapYqr47j7xPlyQ3TFogKxR/XxowNcAspoZy2AZQmKCsvDN20uM7ohOivKIkfxY5jGw/MtHqjOJCjnwbnBIwkfGsFop5vc/wJwc9hLwJQIULIvyxPPqLpVJvc3B8x8/LerC28yKLdHC+75Kxga7I/swrXTXexeS56kPSN9XndIeQQtSKJ1iMkCggEBAOVTcxa1XPaBs0LZBF8+dCrJ7m9KhqToNXMWhF3sfQqodUUt8TgrBkULnwY3dpAjpOFsW6J/B+b5+Bd/7onz2USLsgj2T6cuwUKF8YjnIPFfJMMFxv9am2V3mwYxQvJgptz5e5CPl9EpnyiSe/gQa8wPi5NOoIaNzMRoUqoH+VJueGnP42egmjp/FOH40admjd+k9AaeA9P2Nd7Fy4nF5qekqSyb1u1W8e4sVy596d5KJYIdnU+/nA+wQwz09xSkJIzIdevG7fy53qsLRbN/1NHTr2TLHg1XW/oySRhiozoXDVwGqILGifZtONf6Tp2UKrTJMYvOP7thM47I9TOe+YkCggEAa7gTAVlVw+AFOa/LEfAyHrl1Z1WExUGItuxZSrBVUfPnAszEFcmrXIW+6tQu6dW9KDrZQgZkkx/tbTwAUjQzOD+Jka2spFArZBIMJG1os3L2IqhcG1i8avsCerq2rOuwez/C0hSq6Hvr6tJ6Pu2s6c0G6SJo9bxIirfNeB6kbWhZA3QED2yUq0wDdBU1MwTb0GOM1NATtkV1SJeCK/KiozziXetiYR9wcoFSk1PItRkANARQd5cA8hq/wl+XEPXd/1ZEV7DpyBywXapQnsOE2Eikh5LZL4SAy0eZHC209pFsgj/PMOqlyQLYCxx7JyuwHNB8Ujbq+jMfcNtEKxkjIQKCAQA8Fh40b+lKzSoqYw14E7omfDEmCumm1Uog4VTZCxAjRkzDJ3/FLcA0w3g9J3YGISnyzOei6JSo8pnTPaMd2pIfjCrqbgnakNxJfIVHA4R8qctO+l8pCU+9mmYXzMS/nUzVy1zqD/GcvRkBk40OXQ0pX8rA8Vd7MMhg5VdxW3I6wxX2KbP/03ueV4jnRBBpJde0SmethoJMWo/OnGbA8NKdErwX4wZyS9jJpDBs9YOKuhRcXr69iEPctYl7HI/2DJq8JYv9A1kNSdj3VsVIXN5SLS8oK2iC+dVwOkLuvL3mCTs7FKQuLwkvfEr7iBFM/KTOukE20sVnkFzOWWd2rx6I",
+      "KeyType": "P384"
+    },
+    "Certificates": null
+  }
+}
